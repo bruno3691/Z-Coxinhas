@@ -725,11 +725,43 @@
 
 
 <style>
-.btn-comprar {
-    display:block;
+/* Botão único por produto - Gateway atualizada */
+.botao-comprar-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffbf2f, #ff7a00);
+    color: #111 !important;
+    font-weight: 900;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 14px 34px rgba(255,153,0,.32);
+    transition: transform .2s ease, filter .2s ease;
+    white-space: nowrap;
 }
-.btn-comprar .card-body {
-    cursor:pointer;
+.botao-comprar-card:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: brightness(1.05);
+}
+.btn-comprar {
+    display: block;
+}
+.price-row {
+    align-items: center !important;
+}
+@media(max-width:560px){
+    .price-row {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch !important;
+    }
+    .botao-comprar-card {
+        width: 100%;
+    }
 }
 </style>
 
@@ -907,25 +939,25 @@
     <section id="pague-1-leve-2">
       <div class="section-head"><div><h2>🔥 Promoções mais vendidas</h2><p>Escolha seu combo e finalize o pedido.</p></div><div class="timer">Acaba em <span id="minutes">17</span>m <span id="seconds">34</span>s</div></div>
       <div class="grid">
-        <article class="card"><span class="tag">🔥 MAIS PEDIDO</span><a class="btn-comprar" href="https://go.disruptybr.com.br/mt8df"><img class="card-img" src="images/combo-50-coca.jpg" alt="50 Salgadinhos + Coca-Cola"><div class="card-body"><h3>50 Salgadinhos + Coca-Cola</h3><div class="desc">50 salgadinhos e um refrigerante grande para dividir com a turma.</div><div class="details">Quibe, enroladinho, bolinha de queijo e pastelzinho. <b>Oferta ilimitada!</b></div><div class="price-row"><div><span class="old">R$ 59,99</span><span class="price">R$ 29,90</span><span class="stock">🔥 Apenas <b><span class="estoqueCombo">8</span> combos</b></span></div></div></div></a></article>
-        <article class="card"><span class="tag green">BOM DEMAIS</span><a href="/coxinha/produtos"><img class="card-img" src="images/combo-100.jpg" alt="100 Salgadinhos"><div class="card-body"><h3>100 Salgadinhos</h3><div class="desc">100 salgadinhos variados, crocantes e recheados.</div><div class="details">Perfeito para família, festa pequena ou reunião.</div><div class="price-row"><div><span class="old">R$ 59,99</span><span class="price">R$ 29,90</span></div></div></div></a></article>
-        <article class="card"><span class="tag">COMBO FAMÍLIA</span><a class="btn-comprar" href="https://go.disruptybr.com.br/mdqsvv5pgu"><img class="card-img" src="images/combo-100-coca.jpg" alt="100 Salgadinhos + Coca-Cola"><div class="card-body"><h3>100 Salgadinhos + Coca-Cola</h3><div class="desc">100 salgadinhos e refrigerante grande para dividir.</div><div class="details">Um dos combos mais completos da loja.</div><div class="price-row"><div><span class="old">R$ 79,99</span><span class="price">R$ 39,90</span></div></div></div></a></article>
+        <article class="card"><span class="tag">🔥 MAIS PEDIDO</span><a class="btn-comprar" href="https://go.disruptybr.com.br/mdqsvv5pgu"><img class="card-img" src="images/combo-50-coca.jpg" alt="50 Salgadinhos + Coca-Cola"><div class="card-body"><h3>50 Salgadinhos + Coca-Cola</h3><div class="desc">50 salgadinhos e um refrigerante grande para dividir com a turma.</div><div class="details">Quibe, enroladinho, bolinha de queijo e pastelzinho. <b>Oferta ilimitada!</b></div><div class="price-row"><div><span class="old">R$ 59,99</span><span class="price">R$ 29,90</span><span class="stock">🔥 Apenas <b><span class="estoqueCombo">8</span> combos</b></span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/mdqsvv5pgu">🔥 Comprar agora</a></div></div></a></article>
+        <article class="card"><span class="tag green">BOM DEMAIS</span><a class="btn-comprar" href="https://go.disruptybr.com.br/b4sur6vgsa"><img class="card-img" src="images/combo-100.jpg" alt="100 Salgadinhos"><div class="card-body"><h3>100 Salgadinhos</h3><div class="desc">100 salgadinhos variados, crocantes e recheados.</div><div class="details">Perfeito para família, festa pequena ou reunião.</div><div class="price-row"><div><span class="old">R$ 59,99</span><span class="price">R$ 29,90</span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/b4sur6vgsa">🔥 Comprar agora</a></div></div></a></article>
+        <article class="card"><span class="tag">COMBO FAMÍLIA</span><a class="btn-comprar" href="https://go.disruptybr.com.br/1pa1xhg4wp"><img class="card-img" src="images/combo-100-coca.jpg" alt="100 Salgadinhos + Coca-Cola"><div class="card-body"><h3>100 Salgadinhos + Coca-Cola</h3><div class="desc">100 salgadinhos e refrigerante grande para dividir.</div><div class="details">Um dos combos mais completos da loja.</div><div class="price-row"><div><span class="old">R$ 79,99</span><span class="price">R$ 39,90</span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/1pa1xhg4wp">🔥 Comprar agora</a></div></div></a></article>
       </div>
     </section>
 
     <section id="combos">
       <div class="section-head"><div><h2>Combos e individuais</h2><p>Opções rápidas para qualquer momento.</p></div></div>
       <div class="grid">
-        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/hgtc8"><img class="card-img" src="images/combo-25.jpg" alt="25 Salgadinhos + Coca-Cola"><div class="card-body"><h3>25 Salgadinhos + Coca Média</h3><div class="desc">25 salgadinhos e refrigerante médio para dividir.</div><div class="price-row"><div><span class="old">R$ 29,99</span><span class="price">R$ 19,90</span></div></div></div></a></article>
-        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/qen0c"><img class="card-img" src="images/mini-churros.jpg" alt="20 Salgadinhos + Mini Churros"><div class="card-body"><h3>20 Salgadinhos + 5 Mini Churros</h3><div class="desc">Para quem gosta de salgado com docinho no final.</div><div class="price-row"><div><span class="old">R$ 29,99</span><span class="price">R$ 19,90</span></div></div></div></a></article>
-        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/edskp"><img class="card-img" src="images/combo-10.jpg" alt="10 Mini Salgadinhos + Coca Mini"><div class="card-body"><h3>10 Mini Salgadinhos + Coca Mini</h3><div class="desc">Prático, gostoso e ideal para um lanche rápido.</div><div class="price-row"><div><span class="old">R$ 24,99</span><span class="price">R$ 14,90</span></div></div></div></a></article>
+        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/ldwl8c5hhs"><img class="card-img" src="images/combo-25.jpg" alt="25 Salgadinhos + Coca-Cola"><div class="card-body"><h3>25 Salgadinhos + Coca Média</h3><div class="desc">25 salgadinhos e refrigerante médio para dividir.</div><div class="price-row"><div><span class="old">R$ 29,99</span><span class="price">R$ 19,90</span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/ldwl8c5hhs">🔥 Comprar agora</a></div></div></a></article>
+        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/xd4ck1wscz"><img class="card-img" src="images/mini-churros.jpg" alt="20 Salgadinhos + Mini Churros"><div class="card-body"><h3>20 Salgadinhos + 5 Mini Churros</h3><div class="desc">Para quem gosta de salgado com docinho no final.</div><div class="price-row"><div><span class="old">R$ 29,99</span><span class="price">R$ 19,90</span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/xd4ck1wscz">🔥 Comprar agora</a></div></div></a></article>
+        <article class="card"><a class="btn-comprar" href="https://go.disruptybr.com.br/nnwlwcv9hl"><img class="card-img" src="images/combo-10.jpg" alt="10 Mini Salgadinhos + Coca Mini"><div class="card-body"><h3>10 Mini Salgadinhos + Coca Mini</h3><div class="desc">Prático, gostoso e ideal para um lanche rápido.</div><div class="price-row"><div><span class="old">R$ 24,99</span><span class="price">R$ 14,90</span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/nnwlwcv9hl">🔥 Comprar agora</a></div></div></a></article>
       </div>
     </section>
 
     <section id="individual">
       <div class="section-head"><div><h2>Individual em promoção</h2><p>Crocante, recheado e com ótimo custo-benefício.</p></div></div>
       <div class="grid">
-        <article class="card"><span class="tag green">CUSTO-BENEFÍCIO</span><a class="btn-comprar" href="https://go.disruptybr.com.br/ffowu"><img class="card-img" src="images/combo-50.jpg" alt="50 Salgadinhos"><div class="card-body"><h3>50 Salgadinhos</h3><div class="desc">Coxinha, enroladinho, bolinha de queijo, quibe ou pastelzinho.</div><div class="details">A maioria escolhe esse pelo melhor custo-benefício.</div><div class="price-row"><div><span class="old">R$ 49,99</span><span class="price">R$ 24,90</span><span class="stock">🔥 Apenas <b><span class="estoqueCombo">16</span> combos</b></span></div></div></div></a></article>
+        <article class="card"><span class="tag green">CUSTO-BENEFÍCIO</span><a class="btn-comprar" href="https://go.disruptybr.com.br/sjdb2lschu"><img class="card-img" src="images/combo-50.jpg" alt="50 Salgadinhos"><div class="card-body"><h3>50 Salgadinhos</h3><div class="desc">Coxinha, enroladinho, bolinha de queijo, quibe ou pastelzinho.</div><div class="details">A maioria escolhe esse pelo melhor custo-benefício.</div><div class="price-row"><div><span class="old">R$ 49,99</span><span class="price">R$ 24,90</span><span class="stock">🔥 Apenas <b><span class="estoqueCombo">16</span> combos</b></span></div><a class="botao-comprar-card" href="https://go.disruptybr.com.br/sjdb2lschu">🔥 Comprar agora</a></div></div></a></article>
       </div>
     </section>
 
@@ -1148,7 +1180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const PRODUCTS = [{"id": "100coca", "title": "100 Salgadinhos + Coca-Cola Grande", "price": 39.9, "url": "https://go.disruptybr.com.br/mdqsvv5pgu"}, {"id": "combo50coca", "title": "50 Salgadinhos + Coca-Cola", "price": 29.9, "url": "https://go.disruptybr.com.br/mt8df"}, {"id": "25coca", "title": "25 Salgadinhos + Coca-Cola Média", "price": 19.9, "url": "https://go.disruptybr.com.br/hgtc8"}, {"id": "20churros", "title": "20 Salgadinhos + 5 Mini Churros", "price": 19.9, "url": "https://go.disruptybr.com.br/qen0c"}, {"id": "10coca", "title": "10 Salgadinhos + Coca-Cola Mini", "price": 14.9, "url": "https://go.disruptybr.com.br/edskp"}, {"id": "50salgados", "title": "50 Salgadinhos Sortidos", "price": 24.9, "url": "https://go.disruptybr.com.br/ffowu"}, {"id": "100salgados", "title": "100 Salgadinhos Sortidos", "price": 29.9, "url": ""}];
+    const PRODUCTS = [{"id": "combo50coca", "title": "50 Salgadinhos + Coca-Cola", "price": 29.9, "url": "https://go.disruptybr.com.br/mdqsvv5pgu"}, {"id": "100salgados", "title": "100 Salgadinhos Sortidos", "price": 29.9, "url": "https://go.disruptybr.com.br/b4sur6vgsa"}, {"id": "100coca", "title": "100 Salgadinhos + Coca-Cola Grande", "price": 39.9, "url": "https://go.disruptybr.com.br/1pa1xhg4wp"}, {"id": "25coca", "title": "25 Salgadinhos + Coca-Cola Média", "price": 19.9, "url": "https://go.disruptybr.com.br/ldwl8c5hhs"}, {"id": "20churros", "title": "20 Salgadinhos + 5 Mini Churros", "price": 19.9, "url": "https://go.disruptybr.com.br/xd4ck1wscz"}, {"id": "10coca", "title": "10 Salgadinhos + Coca-Cola Mini", "price": 14.9, "url": "https://go.disruptybr.com.br/nnwlwcv9hl"}, {"id": "50salgados", "title": "50 Salgadinhos Sortidos", "price": 24.9, "url": "https://go.disruptybr.com.br/sjdb2lschu"}];
     const cartDrawer = document.getElementById("cartDrawer");
     const cartOverlay = document.getElementById("cartOverlay");
     const cartClose = document.getElementById("cartClose");
@@ -1251,18 +1283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `).join("");
     }
 
-    "]`).forEach(link => {
-                if (link.querySelector(".btn-add-cart")) return;
-                link.setAttribute("data-original-href", href);
-                link.setAttribute("href", "javascript:void(0)");
-                link.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    addToCart(id);
-                });
-                
-            });
-        });
-    }
+    
 
     cartFloating.addEventListener("click", openCart);
     cartClose.addEventListener("click", closeCart);
